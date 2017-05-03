@@ -69,12 +69,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Pages\GoogleHomePage.cs" />
+    <Compile Include="Pages\GoogleSearchResultsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specs\GoogleSiteRankings.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoogleSiteRankings.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Specs\StepDefinitions\BaseSteps.cs" />
+    <Compile Include="Specs\StepDefinitions\SiteRankingSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Specs\GoogleSiteRankings.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GoogleSiteRankings.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
